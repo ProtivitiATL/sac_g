@@ -582,7 +582,7 @@
 			<div id="chart_div"></div>
 		`;
 
-    class GoogleGauge extends HTMLElement {
+    class speedoMeter extends HTMLElement {
         constructor() {
             super();
             let shadowRoot = this.attachShadow({ mode: "open" });
@@ -618,33 +618,8 @@
             });
             console.log("changedProperties = ", changedProperties);
 
-            function drawChart(props) {
-                console.log("props =", props)
-                var data = google.visualization.arrayToDataTable([
-                    ['Label', 'Value'],
-                    [props.label, props.value]
-                ]);
 
-                var options = {
-                    chartArea: {
-                        // leave room for y-axis labels
-                        width: '94%'
-                    },
-                    legend: {
-                        position: 'top'
-                    },
-                    width: '100%',
-                    redFrom: props.redFrom, redTo: props.redTo,
-                    yellowFrom: props.yellowFrom, yellowTo: props.yellowTo,
-                    minorTicks: 5
-                };
-
-                var chart = new speedoMeter(ctx);
-
-                chart.draw(data, options);
-            }
         }
     }
-
     customElements.define("com-protiviti-speedoMeter", speedoMeter);
 })();
