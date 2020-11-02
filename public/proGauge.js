@@ -51,7 +51,7 @@
     
         //FUNCTION CALLED AFTER RENDERING
         this.afterUpdate = function() {
-            setTimeout(function(){proGauge()},250);
+            setTimeout(function(){proGauge2()},250);
         };
     
     
@@ -230,7 +230,7 @@
     
         
         //MAIN FUNCTION OF THE COMPONENT
-        function proGauge(){
+        function proGauge2(){
             
             //INITIALIZE VARIABLES
             var DEG2RAD = Math.PI / 180;
@@ -619,7 +619,7 @@
 			// google.charts.setOnLoadCallback(function() {
 			// 	drawChart(myProps);
             // });
-            proGauge();
+            proGauge2();
 			console.log("changedProperties = ", changedProperties);
 
 		}
