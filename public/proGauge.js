@@ -620,6 +620,8 @@
 			// 	drawChart(myProps);
             // });
             var chart = new proGauge(ctx);
+            chart.draw(myProps, options);
+
 			console.log("changedProperties = ", changedProperties);
 
 		}
