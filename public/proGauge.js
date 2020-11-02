@@ -619,7 +619,7 @@
 			// google.charts.setOnLoadCallback(function() {
 			// 	drawChart(myProps);
             // });
-            proGauge2();
+            var chart = new proGauge(ctx);
 			console.log("changedProperties = ", changedProperties);
 
 		}
