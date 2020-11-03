@@ -586,18 +586,31 @@
             <canvas id="myCanvas" width="200" height="100" style="border:3px solid #d3d3d3;">
 Your browser does not support the HTML canvas tag.</canvas>
 
-        <script>
-	function f(){
-            var c = document.getElementById("myCanvas");
-            var ctx = c.getContext("2d");
-            ctx.beginPath();
-            ctx.moveTo(0,0);
-            ctx.lineTo(200,100);
-            ctx.stroke();	
-		ctx.globalCompositeOperation = "source-over";
-		ctx.globalAlpha = 1;
-	}
-        </script>
+var canvas=document.getElementById("myCanvas");
+var ctx=canvas.getContext("2d");
+
+var myCircle={
+  centerX:50,
+  centerY:50,
+  radius:25,
+  fill:'blue'
+}
+
+redraw();
+
+document.getElementById('move').addEventListener('click',function(){
+  myCircle.centerX+=5;
+  redraw();
+});
+
+function redraw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.beginPath();
+  ctx.arc( myCircle.centerX, myCircle.centerY, myCircle.radius, 0, Math.PI*2 );
+  ctx.closePath();
+  ctx.fillStyle=myCircle.fill;
+  ctx.fill();
+}
 `;
 
 	class proGauge extends HTMLElement {
