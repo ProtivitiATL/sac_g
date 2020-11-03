@@ -582,7 +582,17 @@
 					display: block;
 				} 
 			</style> 
-			<div id="chart_div"></div>
+            <div id="chart_div"></div>
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(200,100);
+ctx.stroke();
+</script>
 		`;
 
 	class proGauge extends HTMLElement {
@@ -611,7 +621,7 @@
 			console.log("this._props prop = ", this._props);
 			this._props = { ...this._props, ...changedProperties };
 
-			var ctx = this.shadowRoot.getElementById('chart_div');
+			var ctx = this.shadowRoot.getElementById('myCanvas');
 
 			var myProps = this._props
 			
