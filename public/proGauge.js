@@ -620,12 +620,19 @@
 			// 	drawChart(myProps);
             // });
             var chart = new proGauge(ctx);
-            chart.draw(myProps, options);
+            //chart.draw(myProps, options);
+            loadthis(this);
 
 			console.log("changedProperties = ", changedProperties);
 
 		}
 	}
+    function loadthis(that) {
+        var that_ = that;
 
+        let content = document.createElement('div');
+        content.slot = "content";
+        that_.appendChild(content);
+    }
 	customElements.define("com-protiviti-demo-gauge", proGauge);
 })();
