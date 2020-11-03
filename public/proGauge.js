@@ -633,6 +633,10 @@
         let content = document.createElement('div');
         content.slot = "content";
         that_.appendChild(content);
+
+        let div0 = document.createElement('div');   
+        div0.innerHTML = '<h1>HERE</h1>';
+        _shadowRoot.appendChild(div0); 
     }
 	customElements.define("com-protiviti-demo-gauge", proGauge);
 })();
