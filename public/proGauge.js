@@ -585,7 +585,7 @@
             <div id="chart_div"></div>
             <canvas id="myCanvas" width="200" height="100" style="border:3px solid #d3d3d3;">
 Your browser does not support the HTML canvas tag.</canvas>
-
+<script>
 var canvas=document.getElementById("myCanvas");
 var ctx=canvas.getContext("2d");
 
@@ -611,6 +611,7 @@ function redraw(){
   ctx.fillStyle=myCircle.fill;
   ctx.fill();
 }
+</script>
 `;
 
 	class proGauge extends HTMLElement {
