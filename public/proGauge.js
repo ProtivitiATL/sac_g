@@ -592,9 +592,11 @@ Your browser does not support the HTML canvas tag.</canvas>
             ctx.beginPath();
             ctx.moveTo(0,0);
             ctx.lineTo(200,100);
-            ctx.stroke();
+            ctx.stroke();	
+		ctx.globalCompositeOperation = "source-over";
+		ctx.globalAlpha = 1;
         </script>
-		`;
+`;
 
 	class proGauge extends HTMLElement {
 		constructor() {
