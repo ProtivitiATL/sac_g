@@ -587,6 +587,7 @@
 Your browser does not support the HTML canvas tag.</canvas>
 
         <script>
+	function f(){
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
             ctx.beginPath();
@@ -595,6 +596,7 @@ Your browser does not support the HTML canvas tag.</canvas>
             ctx.stroke();	
 		ctx.globalCompositeOperation = "source-over";
 		ctx.globalAlpha = 1;
+	}
         </script>
 `;
 
@@ -603,8 +605,10 @@ Your browser does not support the HTML canvas tag.</canvas>
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
 			shadowRoot.appendChild(template.content.cloneNode(true));
+			
 			this.addEventListener("click", event => {
 				var event = new Event("onClick");
+				shadowRoot.appendChild("<script>f();</script>");
 				this.dispatchEvent(event);
 			});
 			this._props = {};
