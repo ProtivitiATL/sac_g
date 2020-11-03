@@ -589,6 +589,7 @@ Your browser does not support the HTML canvas tag.</canvas>
         <script>
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
+            ctx.beginPath();
             ctx.moveTo(0,0);
             ctx.lineTo(200,100);
             ctx.stroke();
@@ -646,7 +647,7 @@ Your browser does not support the HTML canvas tag.</canvas>
 
         let div0 = document.createElement('div');   
         div0.innerHTML = '<h1>HERE</h1>';
-        shadowRoot.appendChild(div0); 
+        that_.appendChild(div0); 
     }
 	customElements.define("com-protiviti-demo-gauge", proGauge);
 })();
