@@ -583,16 +583,16 @@
 				} 
 			</style> 
             <div id="chart_div"></div>
-            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+            <canvas id="myCanvas" width="200" height="100" style="border:3px solid #d3d3d3;">
 Your browser does not support the HTML canvas tag.</canvas>
 
-<script>
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.moveTo(0,0);
-ctx.lineTo(200,100);
-ctx.stroke();
-</script>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.moveTo(0,0);
+            ctx.lineTo(200,100);
+            ctx.stroke();
+        </script>
 		`;
 
 	class proGauge extends HTMLElement {
@@ -646,7 +646,7 @@ ctx.stroke();
 
         let div0 = document.createElement('div');   
         div0.innerHTML = '<h1>HERE</h1>';
-        _shadowRoot.appendChild(div0); 
+        shadowRoot.appendChild(div0); 
     }
 	customElements.define("com-protiviti-demo-gauge", proGauge);
 })();
