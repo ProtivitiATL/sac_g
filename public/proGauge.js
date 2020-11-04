@@ -578,9 +578,9 @@
 	let template = document.createElement("template");
 	template.innerHTML = `
 			
-<canvas id='myCanvas' width=300 height=300 style='border:3px solid #FF0000'></canvas>
+<canvas id='myCanvasPro' width=300 height=300 style='border:3px solid #FF0000'></canvas>
 <script>
-var canvas=document.getElementById('myCanvas';
+var canvas=document.getElementById("myCanvasPro");
 var ctx=canvas.getContext('2d');
 canvas.width = 50;
 
@@ -593,7 +593,7 @@ var myCircle={
 
 redraw();
 
-document.getElementById('move').addEventListener('click',function(){
+document.getElementById("move").addEventListener('click',function(){
   myCircle.centerX+=5;
   redraw();
 });
@@ -607,7 +607,7 @@ function redraw(){
   ctx.fill();
 }
 </script>
-<button id='move'>Move Me</button>
+<button id="move">Move Me</button>
 <br>
 `;
 
@@ -616,6 +616,7 @@ function redraw(){
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
 			shadowRoot.appendChild(template.content.cloneNode(true));
+			shadowRoot.appendChild("<button id="move">Move Me Again</button>");
 			
 			this.addEventListener("click", event => {
 				var event = new Event("onClick");
