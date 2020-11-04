@@ -584,9 +584,9 @@
 			</style> 
             <div id="chart_div"></div>
             
-<canvas id="canvas" width=300 height=300 style="border:3px solid #FF0000;></canvas>
+<canvas id="myCanvas" width=300 height=300 style="border:3px solid #FF0000;></canvas>
 <script>
-var canvas=document.getElementById("canvas");
+var canvas=document.getElementById("myCanvas");
 var ctx=canvas.getContext("2d");
 
 var myCircle={
