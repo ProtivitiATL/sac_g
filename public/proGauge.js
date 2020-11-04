@@ -578,11 +578,11 @@
 	let template = document.createElement("template");
 	template.innerHTML = `
 			
-            
 <canvas id='myCanvas' width=300 height=300 style='border:3px solid #FF0000'></canvas>
 <script>
 var canvas=document.getElementById('myCanvas';
 var ctx=canvas.getContext('2d');
+canvas.width = 50;
 
 var myCircle={
   centerX:50,
