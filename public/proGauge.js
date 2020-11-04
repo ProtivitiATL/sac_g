@@ -576,7 +576,7 @@
     });
     // library END
 	let template = document.createElement("template");
-	template.innerHTML = `
+	template.innerHTML = '
 			<style>
 				:host {
 					display: block;
@@ -614,7 +614,7 @@ function redraw(){
 </script>
 <button id=move>Move</button>
 <br>
-`;
+';
 
 	class proGauge extends HTMLElement {
 		constructor() {
