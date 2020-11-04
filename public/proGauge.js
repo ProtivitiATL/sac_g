@@ -624,7 +624,7 @@ function redraw(){
 			
 			this.addEventListener("click", event => {
 				var event = new Event("onClick");
-				shadowRoot.appendChild("<script>f();</script>");
+				//shadowRoot.appendChild("<script>f();</script>");
 				this.dispatchEvent(event);
 			});
 			this._props = {};
