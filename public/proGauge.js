@@ -577,12 +577,7 @@
     // library END
 	let template = document.createElement("template");
 	template.innerHTML = `
-			<style>
-				:host {
-					display: block;
-				} 
-			</style> 
-            <div id='chart_div'></div>
+			
             
 <canvas id='myCanvas' width=300 height=300 style='border:3px solid #FF0000'></canvas>
 <script>
@@ -612,15 +607,15 @@ function redraw(){
   ctx.fill();
 }
 </script>
-<button id='move'>Move</button>
+<button id='move'>Move Me</button>
 <br>
 `;
 
 	class proGauge extends HTMLElement {
 		constructor() {
 			super(); 
-			//let shadowRoot = this.attachShadow({mode: "open"});
-			//shadowRoot.appendChild(template.content.cloneNode(true));
+			let shadowRoot = this.attachShadow({mode: "open"});
+			shadowRoot.appendChild(template.content.cloneNode(true));
 			
 			this.addEventListener("click", event => {
 				var event = new Event("onClick");
