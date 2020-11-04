@@ -612,15 +612,15 @@ function redraw(){
   ctx.fill();
 }
 </script>
-<button id=move>Move</button>
+<button id='move'>Move</button>
 <br>
 `;
 
 	class proGauge extends HTMLElement {
 		constructor() {
 			super(); 
-			let shadowRoot = this.attachShadow({mode: "open"});
-			shadowRoot.appendChild(template.content.cloneNode(true));
+			//let shadowRoot = this.attachShadow({mode: "open"});
+			//shadowRoot.appendChild(template.content.cloneNode(true));
 			
 			this.addEventListener("click", event => {
 				var event = new Event("onClick");
