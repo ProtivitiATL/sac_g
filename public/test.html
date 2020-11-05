@@ -16,7 +16,7 @@ ctx.beginPath();
 ctx.arc(95,50,40,0,2*Math.PI);
 ctx.stroke();
     
-    var that = ctx;
+    var that = this;
     var haveNumbers = false;
     var showValue = false;
     var numOfBigTicks = 4;
@@ -38,206 +38,206 @@ ctx.stroke();
     var ttColor = "#000000";
 
     
-    c.fCanvas = null;
-    c.sCanvas = null;
-    c.pTitle = null;
+    this.fCanvas = null;
+    this.sCanvas = null;
+    this.pTitle = null;
     
     //FUNCTION CALLED IN ITIALIZE
     //c.init = function() {
-        c.fCanvas = document.createElement("canvas");
-        c.sCanvas = document.createElement("canvas");
-        c.pTitle = document.createElement("p");
-        c.pTitle.style.position = 'absolute';
-        c.pTitle.style.top = '-50px';
-        c.pTitle.style.width = '100%';
-        c.pTitle.style.left = '0px';
-        c.pTitle.style.textAlign = 'center';
-        c.fCanvas.style.position = 'absolute';
-        c.fCanvas.style.left = '0px';
-        c.fCanvas.style.top = '0px';
-        c.sCanvas.style.position = 'absolute';
-        c.sCanvas.style.left = '0px';
-        c.sCanvas.style.top = '0px';
-        c.append(c.pTitle);
-        c.append(c.fCanvas);
-        c.append(c.sCanvas);
+        this.fCanvas = document.createElement("canvas");
+        this.sCanvas = document.createElement("canvas");
+        this.pTitle = document.createElement("p");
+        this.pTitle.style.position = 'absolute';
+        this.pTitle.style.top = '-50px';
+        this.pTitle.style.width = '100%';
+        this.pTitle.style.left = '0px';
+        this.pTitle.style.textAlign = 'center';
+        this.fCanvas.style.position = 'absolute';
+        this.fCanvas.style.left = '0px';
+        this.fCanvas.style.top = '0px';
+        this.sCanvas.style.position = 'absolute';
+        this.sCanvas.style.left = '0px';
+        this.sCanvas.style.top = '0px';
+        this.append(this.pTitle);
+        this.append(this.fCanvas);
+        this.append(this.sCanvas);
     //};
 
     //FUNCTION CALLED AFTER RENDERING
-    c.afterUpdate = function() {
+    this.afterUpdate = function() {
         setTimeout(function(){proGauge()},250);
     };
 
 
     //GETTERS AND SETTERS FOR VARIABLES
-    c.haveNumbers = function(value) {
+    this.haveNumbers = function(value) {
         if (value == undefined) {
             return haveNumbers;
         } else {
             haveNumbers = value;
-            return c;
+            return this;
         }
     };	
 
-    c.numOfSmallTicks = function(value) {
+    this.numOfSmallTicks = function(value) {
         if (value == undefined) {
             return numOfSmallTicks;
         } else {
             numOfSmallTicks = value;
-            return c;
+            return this;
         }
     };	
 
-    c.numOfBigTicks = function(value) {
+    this.numOfBigTicks = function(value) {
         if (value == undefined) {
             return numOfBigTicks;
         } else {
             numOfBigTicks = value;
-            return c;
+            return this;
         }
     };	
 
-    c.indicator = function(value) {
+    this.indicator = function(value) {
         if (value == undefined) {
             return indicator;
         } else {
             indicator = value;
-            return c;
+            return this;
         }
     };
     
-    c.needleColor = function(value) {
+    this.needleColor = function(value) {
         if (value == undefined) {
             return needleColor;
         } else {
             needleColor = value;
-            return c;
+            return this;
         }
     };
 
-    c.title = function(value) {
+    this.title = function(value) {
         if (value == undefined) {
             return title;
         } else {
             title = value;
-            return c;
+            return this;
         }
     };
 
-    c.showValue = function(value) {
+    this.showValue = function(value) {
         if (value == undefined) {
             return showValue;
         } else {
             showValue = value;
-            return c;
+            return this;
         }
     };	
     
-    c.startValue = function(value) {
+    this.startValue = function(value) {
         if (value == undefined) {
             return startValue;
         } else {
             startValue = value;
-            return c;
+            return this;
         }
     };	
     
-    c.endValue = function(value) {
+    this.endValue = function(value) {
         if (value == undefined) {
             return endValue;
         } else {
             endValue = value;
-            return c;
+            return this;
         }
     };	
     
-    c.indicatorHop = function(value) {
+    this.indicatorHop = function(value) {
         if (value == undefined) {
             return indicatorHop;
         } else {
             indicatorHop = value;
-            return c;
+            return this;
         }
     };
     
-    c.showedValue = function(value) {
+    this.showedValue = function(value) {
         if (value == undefined) {
             return showedValue;
         } else {
             showedValue = value;
-            return c;
+            return this;
         }
     };
 
-    c.gradientColor = function(value) {
+    this.gradientColor = function(value) {
         if (value == undefined) {
             return gradientColor;
         } else {
             gradientColor = value;
-            return c;
+            return this;
         }
     };
 
-    c.firstColor = function(value) {
+    this.firstColor = function(value) {
         if (value == undefined) {
             return firstColor;
         } else {
             firstColor = value;
-            return c;
+            return this;
         }
     };	
 
-    c.secondColor = function(value) {
+    this.secondColor = function(value) {
         if (value == undefined) {
             return secondColor;
         } else {
             secondColor = value;
-            return c;
+            return this;
         }
     };	
 
-    c.thirdColor = function(value) {
+    this.thirdColor = function(value) {
         if (value == undefined) {
             return thirdColor;
         } else {
             thirdColor = value;
-            return c;
+            return this;
         }
     };	
 
-    c.mainColor = function(value) {
+    this.mainColor = function(value) {
         if (value == undefined) {
             return mainColor;
         } else {
             mainColor = value;
-            return c;
+            return this;
         }
     };		
     
-    c.startSecondColor = function(value) {
+    this.startSecondColor = function(value) {
         if (value == undefined) {
             return startSecondColor;
         } else {
             startSecondColor = value;
-            return c;
+            return this;
         }
     };	
 
-    c.startThirdColor = function(value) {
+    this.startThirdColor = function(value) {
         if (value == undefined) {
             return startThirdColor;
         } else {
             startThirdColor = value;
-            return c;
+            return this;
         }
     };		
     
-    c.ttColor = function(value) {
+    this.ttColor = function(value) {
         if (value == undefined) {
             return ttColor;
         } else {
             ttColor = value;
-            return c;
+            return this;
         }
     };		
     
@@ -607,7 +607,7 @@ var c = document.getElementById("myCanvas");
 //ctx.arc(95,50,40,0,2*Math.PI);
 //ctx.stroke();
 </script> 
-    <button type="button" onclick="myFunction(c)">My Gauge 3</button>
+    <button type="button" onclick="myFunction(c)">My Gauge 4</button>
  
     
 </body>
