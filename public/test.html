@@ -9,7 +9,7 @@ function myFunction(c) {
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
-    console.log("b In myFunction: " + time);
+    console.log("c In myFunction: " + time);
     
     var ctx = c.getContext("2d");
 ctx.beginPath();
@@ -69,6 +69,7 @@ ctx.stroke();
         setTimeout(function(){proGauge()},250);
     };
 
+    proGauge();
 
     //GETTERS AND SETTERS FOR VARIABLES
     this.haveNumbers = function(value) {
@@ -246,7 +247,7 @@ ctx.stroke();
     
     //MAIN FUNCTION OF THE COMPONENT
     function proGauge(){
-        console.log("In proGauge");
+        console.log(">>>>> In proGauge");
         
         //INITIALIZE VARIABLES
         var DEG2RAD = Math.PI / 180;
