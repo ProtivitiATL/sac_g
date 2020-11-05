@@ -43,8 +43,9 @@ ctx.stroke();
     this.pTitle = null;
     
     //FUNCTION CALLED IN ITIALIZE
-    //c.init = function() {
-        this.fCanvas = document.createElement("canvas");
+    c.init = function() {
+        console.log(">> In Init: " + time);
+       this.fCanvas = document.createElement("canvas");
         this.sCanvas = document.createElement("canvas");
         this.pTitle = document.createElement("p");
         this.pTitle.style.position = 'absolute';
@@ -61,7 +62,7 @@ ctx.stroke();
             this.$().append($(this.pTitle));
             this.$().append($(this.fCanvas));
             this.$().append($(this.sCanvas));
-    //};
+    };
 
     //FUNCTION CALLED AFTER RENDERING
     this.afterUpdate = function() {
