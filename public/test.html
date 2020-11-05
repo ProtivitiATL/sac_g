@@ -258,8 +258,8 @@ function myFunction(c) {
         var DEG2RAD = Math.PI / 180;
         var UNIT = 100;
         
-        var width = 200; //this.$().width();
-        var height = 200; //this.$().height();
+        var width = this.$().width();
+        var height = this.$().height();
 
         
         that.fCanvas.width= width;
@@ -268,7 +268,7 @@ function myFunction(c) {
         that.sCanvas.width=width;
         that.sCanvas.height=height;
 
-        alert("H = " + that.sCanvas.height);
+        //alert("H = " + that.sCanvas.height);
         
         var scale = Math.min(width,height) / (2*UNIT);
         
@@ -423,7 +423,7 @@ if(!gradientColor){
 
     // WHEEL 30 ON THE LEFT
     // TRACK CIRCLE
-    alert(centerX);
+    //alert(centerX);
     sx = centerX+Math.cos(210*DEG2RAD)*(radius-bodyWidth*2);
     sy = centerY+Math.sin(210*DEG2RAD)*(radius-bodyWidth*2);
     dx = centerX+Math.cos(-30*DEG2RAD)*(radius-bodyWidth*2);
@@ -607,7 +607,7 @@ if(!gradientColor){
 <h1>Test Page</h1>
 
 
-<canvas id="myCanvas" width="400" height="400" style="border:3px solid #160ac0;">
+<canvas id="myCanvas" width="400" height="400" style="border:3px solid #44c00a;">
 Your browser does not support the HTML canvas tag.</canvas>
 <script>
 var c = document.getElementById("myCanvas");
