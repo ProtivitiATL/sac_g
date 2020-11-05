@@ -16,7 +16,7 @@ ctx.beginPath();
 ctx.arc(95,50,40,0,2*Math.PI);
 ctx.stroke();
     
-    var that = c;
+    var that = ctx;
     var haveNumbers = false;
     var showValue = false;
     var numOfBigTicks = 4;
@@ -245,6 +245,7 @@ ctx.stroke();
     
     //MAIN FUNCTION OF THE COMPONENT
     function proGauge(){
+        console.log("In proGauge");
         
         //INITIALIZE VARIABLES
         var DEG2RAD = Math.PI / 180;
