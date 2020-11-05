@@ -58,9 +58,9 @@ ctx.stroke();
         c.sCanvas.style.position = 'absolute';
         c.sCanvas.style.left = '0px';
         c.sCanvas.style.top = '0px';
-        c.$().append($(c.pTitle));
-        c.$().append($(c.fCanvas));
-        c.$().append($(c.sCanvas));
+        c.ParentNode.append(c.pTitle);
+        c.ParentNode.append(c.fCanvas);
+        c.ParentNode.append(c.sCanvas);
    // };
 
     //FUNCTION CALLED AFTER RENDERING
@@ -70,7 +70,7 @@ ctx.stroke();
 
 
     //GETTERS AND SETTERS FOR VARIABLES
-    this.haveNumbers = function(value) {
+    c.haveNumbers = function(value) {
         if (value == undefined) {
             return haveNumbers;
         } else {
@@ -606,7 +606,7 @@ var c = document.getElementById("myCanvas");
 //ctx.arc(95,50,40,0,2*Math.PI);
 //ctx.stroke();
 </script> 
-    <button type="button" onclick="myFunction(c)">My Gauge 3</button>
+    <button type="button" onclick="myFunction(c)">My Gauge 4</button>
  
     
 </body>
