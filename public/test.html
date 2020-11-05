@@ -48,7 +48,10 @@ function myFunction(c) {
     //this.init = function() {
         console.log(">> In Init: " + time);
        this.fCanvas = document.createElement("canvas");
+       this.fCanvas.setAttribute("id", "fCanvas1");
         this.sCanvas = document.createElement("canvas");
+        this.sCanvas.setAttribute("id", "sCanvas1");
+
         this.pTitle = document.createElement("p");
         this.pTitle.style.position = 'absolute';
         this.pTitle.style.top = '-50px';
@@ -604,7 +607,7 @@ if(!gradientColor){
 <h1>Test Page</h1>
 
 
-<canvas id="myCanvas" width="400" height="400" style="border:3px solid #0a53c0;">
+<canvas id="myCanvas" width="400" height="400" style="border:3px solid #c00a93;">
 Your browser does not support the HTML canvas tag.</canvas>
 <script>
 var c = document.getElementById("myCanvas");
