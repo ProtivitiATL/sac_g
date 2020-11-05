@@ -5,7 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
-function myFunction(c) {
+function myFunction(c,cc) {
     
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
@@ -71,7 +71,7 @@ function myFunction(c) {
 
     //FUNCTION CALLED AFTER RENDERING
     //this.afterUpdate = function() {
-        setTimeout(function(){proGauge(c)},500);
+        setTimeout(function(){proGauge(cc)},500);
     //};
 
     //proGauge();
@@ -609,15 +609,17 @@ if(!gradientColor){
 
 
 <canvas id="myCanvas" width="400" height="400" style="border:3px solid #40a0ff;">
+    <canvas id="myCanvas2" width="400" height="400" style="border:3px solid #40a0ff;"></canvas>
 Your browser does not support the HTML canvas tag.</canvas>
 <script>
 var c = document.getElementById("myCanvas");
+var cc = document.getElementById("myCanva2");
 //var ctx = c.getContext("2d");
 //ctx.beginPath();
 //ctx.arc(95,50,40,0,2*Math.PI);
 //ctx.stroke();
 </script> 
-    <button type="button" onclick="myFunction(c)">Pro Gauge</button>
+    <button type="button" onclick="myFunction(c,cc)">Pro Gauge</button>
  
     
 </body>
