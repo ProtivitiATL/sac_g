@@ -264,6 +264,8 @@ function myFunction(c) {
         
         that.sCanvas.width=width;
         that.sCanvas.height=height;
+
+        alert("H = " + that.sCanvas.height);
         
         var scale = Math.min(width,height) / (2*UNIT);
         
@@ -602,7 +604,7 @@ if(!gradientColor){
 <h1>Test Page</h1>
 
 
-<canvas id="myCanvas" width="400" height="400" style="border:3px solid #c00a0a;">
+<canvas id="myCanvas" width="400" height="400" style="border:3px solid #6bc00a;">
 Your browser does not support the HTML canvas tag.</canvas>
 <script>
 var c = document.getElementById("myCanvas");
