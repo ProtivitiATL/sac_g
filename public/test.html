@@ -43,7 +43,7 @@ ctx.stroke();
     c.pTitle = null;
     
     //FUNCTION CALLED IN ITIALIZE
-    c.init = function() {
+    //c.init = function() {
         c.fCanvas = document.createElement("canvas");
         c.sCanvas = document.createElement("canvas");
         c.pTitle = document.createElement("p");
@@ -61,7 +61,7 @@ ctx.stroke();
         c.append(c.pTitle);
         c.append(c.fCanvas);
         c.append(c.sCanvas);
-    };
+    //};
 
     //FUNCTION CALLED AFTER RENDERING
     c.afterUpdate = function() {
@@ -606,7 +606,7 @@ var c = document.getElementById("myCanvas");
 //ctx.arc(95,50,40,0,2*Math.PI);
 //ctx.stroke();
 </script> 
-    <button type="button" onclick="myFunction(c)">My Gauge 1</button>
+    <button type="button" onclick="myFunction(c)">My Gauge 2</button>
  
     
 </body>
