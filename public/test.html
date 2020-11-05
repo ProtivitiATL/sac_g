@@ -10,7 +10,7 @@ function myFunction(c) {
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
-    console.log("l In myFunction: " + time);
+    console.log("m In myFunction: " + time);
     
    var ctx = c.getContext("2d");
 //ctx.beginPath();
@@ -66,9 +66,9 @@ function myFunction(c) {
     };
 
     //FUNCTION CALLED AFTER RENDERING
-    this.afterUpdate = function() {
+    //this.afterUpdate = function() {
         setTimeout(function(){proGauge()},500);
-    };
+    //};
 
     //proGauge();
 
