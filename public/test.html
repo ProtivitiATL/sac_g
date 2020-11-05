@@ -10,7 +10,7 @@ function myFunction(c) {
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
-    console.log("j In myFunction: " + time);
+    console.log("k In myFunction: " + time);
     
    var ctx = c.getContext("2d");
 //ctx.beginPath();
@@ -254,8 +254,8 @@ function myFunction(c) {
         var DEG2RAD = Math.PI / 180;
         var UNIT = 100;
         
-        var width = 400; //that.$().width();
-        var height = 400; //that.$().height();
+        var width = that.$().width();
+        var height = that.$().height();
 
         
         that.fCanvas.width=width;
