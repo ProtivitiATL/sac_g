@@ -11,6 +11,11 @@ function myFunction(c) {
 
     console.log("In myFunction: " + time);
     
+    var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+    
     var that = c;
     var haveNumbers = false;
     var showValue = false;
@@ -601,7 +606,7 @@ var c = document.getElementById("myCanvas");
 //ctx.arc(95,50,40,0,2*Math.PI);
 //ctx.stroke();
 </script> 
-    <button type="button" onclick="myFunction(c)">My Gauge</button>
+    <button type="button" onclick="myFunction(c)">My Gauge 2</button>
  
     
 </body>
