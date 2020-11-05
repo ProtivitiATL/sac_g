@@ -10,7 +10,7 @@ function myFunction(c) {
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
-    console.log("n In myFunction: " + time);
+    console.log("o In myFunction: " + time);
     
     // I can write to the canvas
     //var ctx = c.getContext("2d");
@@ -255,8 +255,8 @@ function myFunction(c) {
         var DEG2RAD = Math.PI / 180;
         var UNIT = 100;
         
-        var width = that.$().width();
-        var height = that.$().height();
+        var width = this.$().width();
+        var height = this.$().height();
 
         
         that.fCanvas.width= width;
@@ -602,7 +602,7 @@ if(!gradientColor){
 <h1>Test Page</h1>
 
 
-<canvas id="myCanvas" width="400" height="400" style="border:3px solid #4efcd0;">
+<canvas id="myCanvas" width="400" height="400" style="border:3px solid #994efc;">
 Your browser does not support the HTML canvas tag.</canvas>
 <script>
 var c = document.getElementById("myCanvas");
