@@ -58,9 +58,9 @@ ctx.stroke();
         this.sCanvas.style.position = 'absolute';
         this.sCanvas.style.left = '0px';
         this.sCanvas.style.top = '0px';
-        this.append(this.pTitle);
-        this.append(this.fCanvas);
-        this.append(this.sCanvas);
+            this.$().append($(this.pTitle));
+            this.$().append($(this.fCanvas));
+            this.$().append($(this.sCanvas));
     //};
 
     //FUNCTION CALLED AFTER RENDERING
@@ -607,7 +607,7 @@ var c = document.getElementById("myCanvas");
 //ctx.arc(95,50,40,0,2*Math.PI);
 //ctx.stroke();
 </script> 
-    <button type="button" onclick="myFunction(c)">My Gauge 4</button>
+    <button type="button" onclick="myFunction(c)">My Gauge 5</button>
  
     
 </body>
