@@ -8,7 +8,7 @@
 
 (function myFunction() {
 
-    var that = this;
+    var that = ;
     var haveNumbers = false;
     var showValue = false;
     var numOfBigTicks = 4;
@@ -57,7 +57,7 @@
 
     //FUNCTION CALLED AFTER RENDERING
     this.afterUpdate = function() {
-        setTimeout(function(){proGauge2()},250);
+        setTimeout(function(){proGauge()},250);
     };
 
 
@@ -236,7 +236,7 @@
 
     
     //MAIN FUNCTION OF THE COMPONENT
-    function proGauge(that){
+    function proGauge(){
         
         //INITIALIZE VARIABLES
         var DEG2RAD = Math.PI / 180;
@@ -591,7 +591,7 @@ if(!gradientColor){
 
 <canvas id="myCanvas" width="400" height="400" style="border:3px solid #ff000;">
 Your browser does not support the HTML canvas tag.</canvas>
-<button type="button" onclick="proGauge(myCanvas)">Try it</button>
+<button type="button" onclick="myFunction()">Try it</button>
 <script>
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
