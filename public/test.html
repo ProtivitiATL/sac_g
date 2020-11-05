@@ -308,7 +308,7 @@ function myFunction(c) {
         //INITIALIZE CANVAS DIMENSIONS
     
         
-        var ctx = cc.fCanvas.getContext("2d"); //that
+        var ctx = cc.getContext("2d"); //that
         ctx.clearRect(0, 0,  2 * halfWidth, 2 * halfWidth);
 
         // Radius and center of the circle to be drawn. Variable according to the size of the canvas.
@@ -607,7 +607,7 @@ if(!gradientColor){
 <h1>Test Page</h1>
 
 
-<canvas id="myCanvas" width="400" height="400" style="border:3px solid #0ac019;">
+<canvas id="myCanvas" width="400" height="400" style="border:3px solid #160ac0;">
 Your browser does not support the HTML canvas tag.</canvas>
 <script>
 var c = document.getElementById("myCanvas");
