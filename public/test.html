@@ -10,14 +10,14 @@ function myFunction(c) {
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
-    console.log("i In myFunction: " + time);
+    console.log("j In myFunction: " + time);
     
    var ctx = c.getContext("2d");
 //ctx.beginPath();
 //ctx.arc(95,50,40,0,2*Math.PI);
 //ctx.stroke();
     
-    var that = ctx;
+    var that = this;
     var haveNumbers = false;
     var showValue = false;
     var numOfBigTicks = 4;
@@ -44,7 +44,7 @@ function myFunction(c) {
     this.pTitle = null;
     
     //FUNCTION CALLED IN ITIALIZE
-    //this.init = function() {
+    this.init = function() {
         console.log(">> In Init: " + time);
        this.fCanvas = document.createElement("canvas");
         this.sCanvas = document.createElement("canvas");
@@ -63,7 +63,7 @@ function myFunction(c) {
             this.$().append($(this.pTitle));
             this.$().append($(this.fCanvas));
             this.$().append($(this.sCanvas));
-    //};
+    };
 
     //FUNCTION CALLED AFTER RENDERING
     this.afterUpdate = function() {
