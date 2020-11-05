@@ -10,14 +10,14 @@ function myFunction(c) {
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
-    console.log("g In myFunction: " + time);
+    console.log("h In myFunction: " + time);
     
 //   var ctx = c.getContext("2d");
 //ctx.beginPath();
 //ctx.arc(95,50,40,0,2*Math.PI);
 //ctx.stroke();
     
-    var that = this;
+    var that = ctx;
     var haveNumbers = false;
     var showValue = false;
     var numOfBigTicks = 4;
