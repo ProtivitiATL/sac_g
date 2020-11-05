@@ -10,12 +10,12 @@ function myFunction(c) {
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
-    console.log("e In myFunction: " + time);
+    console.log("f In myFunction: " + time);
     
-    var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.arc(95,50,40,0,2*Math.PI);
-ctx.stroke();
+//   var ctx = c.getContext("2d");
+//ctx.beginPath();
+//ctx.arc(95,50,40,0,2*Math.PI);
+//ctx.stroke();
     
     var that = this;
     var haveNumbers = false;
@@ -254,8 +254,8 @@ ctx.stroke();
         var DEG2RAD = Math.PI / 180;
         var UNIT = 100;
         
-        var width = that.$().width();
-        var height = that.$().height();
+        var width = "100%"; //that.$().width();
+        var height = "100%"; //that.$().height();
 
         
         that.fCanvas.width=width;
