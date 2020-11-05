@@ -537,7 +537,8 @@ if(!gradientColor){
         var currentIndicator = 0.5;
         var maxIndicator = indicator*240/100
 
-        var ctx = that.sCanvas.getContext("2d");
+        //var ctx = that.sCanvas.getContext("2d");
+        var ctx = cc.getContext("2d");
         ctx.translate(centerX, centerY);
 
         ctx.rotate(150*DEG2RAD);
@@ -607,7 +608,7 @@ if(!gradientColor){
 <h1></h1>
 
 
-<canvas id="myCanvas" width="400" height="400" style="border:3px solid #0a77c0;">
+<canvas id="myCanvas" width="400" height="400" style="border:3px solid #909192;">
 Your browser does not support the HTML canvas tag.</canvas>
 <script>
 var c = document.getElementById("myCanvas");
