@@ -38,19 +38,20 @@ function myFunction() {
     var startThirdColor = 80;
     var mainColor = "#EDEDED"
     var ttColor = "#000000";
-
-    
-    fCanvas = null;
+    var fCanvas;
+    var sCanvas;
+    var pTitle;
+   fCanvas = null;
     sCanvas = null;
     pTitle = null;
     
     //FUNCTION CALLED IN ITIALIZE
-    //init = function() {
-        console.log(">> In Init: " + time);
-       fCanvas = document.createElement("canvas");
-       fCanvas.setAttribute("id", "fCanvas1");
-        sCanvas = document.createElement("canvas");
-        sCanvas.setAttribute("id", "sCanvas1");
+    //this.init = function() {
+//        console.log(">> In Init: " + time);
+      fCanvas = document.createElement('CANVAS');
+       //fCanvas.setAttribute("id", "fCanvas1");
+        sCanvas = document.createElement('CANVAS');
+        //sCanvas.setAttribute("id", "sCanvas1");
 
         pTitle = document.createElement("p");
         pTitle.style.position = 'absolute';
@@ -64,14 +65,19 @@ function myFunction() {
         sCanvas.style.position = 'absolute';
         sCanvas.style.left = '0px';
         sCanvas.style.top = '0px';
-            $().append($(pTitle));
-            $().append($(fCanvas));
-            $().append($(sCanvas));
-    //};
 
-    //FUNCTION CALLED AFTER RENDERING
+
+  var ctx = fCanvas.getContext("2d");
+  ctx.fillStyle = "#FF0000";
+  ctx.fillRect(20, 20, 150, 100);
+  document.body.appendChild(fCanvas);
+  
+  var cty = sCanvas.getContext("2d");
+  cty.fillStyle = "#000000";
+  cty.fillRect(20, 20, 150, 100);
+  document.body.appendChild(sCanvas);    //FUNCTION CALLED AFTER RENDERING
     //afterUpdate = function() {
-        setTimeout(function(){proGauge()},500);
+    //    setTimeout(function(){proGauge()},500);
     //};
 
     //proGauge();
