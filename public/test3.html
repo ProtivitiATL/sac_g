@@ -584,7 +584,23 @@ function funcOnload() {
 
 </head>
 
-<body>
+<body onload="funcOnload()" class="white" id="body">
+    <canvas id="gauge"></canvas>
+    <div id="LaunchEnable" onclick="StartLC()">Start Launch Control</div>
+    <input id="LCState" value="0" hidden />
+  
+    <input type="button" onclick="ChangeTachoBGColor(this.value)" value="White" />
+    <input type="button" onclick="ChangeTachoBGColor(this.value)" value="Lime" />
+    <input type="button" onclick="ChangeTachoBGColor(this.value)" value="Yellow" /><br />
+  
+    <input id="TachoHighlightGreen" onchange="setCookie(this.id + 'Cookie', this.value)" />
+    <input id="TachoHighlightYellow" onchange="setCookie(this.id + 'Cookie', this.value)" />
+    <input id="TachoHighlightRed" onchange="setCookie(this.id + 'Cookie', this.value)" /><br />
+  
+    
+  
+    <div id="Tacho">Tacho</div>
+  
 
 <h1></h1>
 
