@@ -547,8 +547,8 @@ window.Gauge = Gauge;
   needle: { start: '#f00', end: '#f00' }
   }
   });
-  gauge.setValue(30); // set the needle value
-  gauge.draw();
+ // gauge.setValue(30); // set the needle value
+ // gauge.draw();
 
   //Resizes the gauge when the screen size changes
   window.onresize = function () {
@@ -592,7 +592,7 @@ window.Gauge = Gauge;
           <div id="chart_div"></div>
       `;
 
-  class GoogleGauge extends HTMLElement {
+  class pGauge extends HTMLElement {
       constructor() {
           super(); 
           let shadowRoot = this.attachShadow({mode: "open"});
@@ -622,18 +622,18 @@ window.Gauge = Gauge;
 
           var myProps = this._props
           
-          google.charts.load('current', {'packages':['gauge']});
-          google.charts.setOnLoadCallback(function() {
-              drawChart(myProps);
-          });
+        //   google.charts.load('current', {'packages':['gauge']});
+        //   google.charts.setOnLoadCallback(function() {
+        //       drawChart(myProps);
+        //  });
           console.log("changedProperties = ", changedProperties);
 
           function drawChart(props) {
               console.log("props =", props)
-              var data = google.visualization.arrayToDataTable([
-              ['Label', 'Value'],
-              [props.label, props.value]
-              ]);
+           //   var data = google.visualization.arrayToDataTable([
+            //   ['Label', 'Value'],
+            //   [props.label, props.value]
+            //   ]);
 
               var options = {
               chartArea: {
@@ -649,11 +649,12 @@ window.Gauge = Gauge;
               minorTicks: 5
               };
 
-              var chart = new google.visualization.Gauge(ctx);
+            //  var chart = new google.visualization.Gauge(ctx);
 
-              chart.draw(data, options);
+            gauge.setValue(30); // set the needle value
+            gauge.draw();
           }
       }
   }
 
-  customElements.define("com-sap-sample-google", GoogleGauge);
+  customElements.define("com-protiviti-pgauge", pGauge);
