@@ -1,0 +1,71 @@
+{
+	"id": "com.protiviti.proGauge",
+	"version": "1.0.0",
+	"name": "proGauge",
+	"description": "A proGauge",
+	"newInstancePrefix": "proGauge",
+	"icon": "https://protivitiatl.github.io/sac_g/public/google/googleGauge.png",
+	"vendor": "Protiviti",
+	"eula": "",
+	"license": "",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-protiviti-demo-gauge",
+			"url": "https://protivitiatl.github.io/sac_g/public/pGauge.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+	],
+	"properties": {
+		"label": {
+			"type": "string",
+			"description": "label",
+			"default": "Label"
+		},
+		"value": {
+			"type": "integer",
+			"description": "value",
+			"default": 44
+		}
+	},
+	"methods": {
+		"setValue": {
+			"description": "Sets the gauge value.",
+			"parameters": [
+				{
+					"name": "newValue",
+					"type": "integer",
+					"description": "The new gauge value."
+				}
+			],
+			"body": "this.value = newValue;"
+		},
+		"getValue": {
+			"returnType": "integer",
+			"description": "Returns the gauge value",
+			"body": "return this.value;"
+		},
+		"setLabel": {
+			"description": "Sets the label value.",
+			"parameters": [
+				{
+					"name": "newLabel",
+					"type": "string",
+					"description": "The new label value."
+				}
+			],
+			"body": "this.label = newLabel;"
+		},
+		"getLabel": {
+			"returnType": "string",
+			"description": "Returns the gauge value",
+			"body": "return this.label;"
+		}
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks the Gauge."
+		}
+	}
+}
