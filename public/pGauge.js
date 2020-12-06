@@ -515,8 +515,8 @@ domReady(function () {
 window.Gauge = Gauge;
 
 // 1
-  var myWidth = WindowSize("Width") / 2;
-  var myHeight = WindowSize("Height") / 2;
+  var myWidth = 400; //WindowSize("Width") / 2;
+  var myHeight = 400; //WindowSize("Height") / 2;
 
   var gauge = new Gauge({
   renderTo: 'gauge',
@@ -552,8 +552,8 @@ window.Gauge = Gauge;
 
   //Resizes the gauge when the screen size changes
   window.onresize = function () {
-    var myWidth = WindowSize("Width") / 2;
-    var myHeight = WindowSize("Height") / 2;
+    var myWidth = 400; // WindowSize("Width") / 2;
+    var myHeight = 400; // WindowSize("Height") / 2;
     gauge.updateConfig({
       width: myWidth,
       height: myHeight
