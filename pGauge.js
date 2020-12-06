@@ -592,7 +592,7 @@ window.Gauge = Gauge;
           <div id="chart_div"></div>
       `;
 
-  class GoogleGauge extends HTMLElement {
+  class pGauge extends HTMLElement {
       constructor() {
           super(); 
           let shadowRoot = this.attachShadow({mode: "open"});
