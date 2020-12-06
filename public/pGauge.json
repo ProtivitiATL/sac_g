@@ -1,5 +1,5 @@
 {
-	"id": "com.protiviti.proGauge",
+	"id": "com.protiviti.pGauge",
 	"version": "1.0.0",
 	"name": "proGauge",
 	"description": "A proGauge",
@@ -11,7 +11,7 @@
 	"webcomponents": [
 		{
 			"kind": "main",
-			"tag": "com-protiviti-demo-gauge",
+			"tag": "com-protiviti-pgauge",
 			"url": "https://protivitiatl.github.io/sac_g/public/pGauge.js",
 			"integrity": "",
 			"ignoreIntegrity": true
