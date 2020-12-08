@@ -327,7 +327,7 @@ Matt Gauge JS
     p = y = b.minValue;
     if (!b.renderTo) throw Error("Canvas element was not specified when creating the Gauge object!");
     var z = b.renderTo.tagName ? b.renderTo : document.getElementById(b.renderTo),
-        a = document.getElementById(b.renderTo).getContext("2d"),
+        a = document.getElementById("gauge").getContext("2d"),
         A,
         C,
         D,
@@ -589,7 +589,7 @@ window.Gauge = Gauge;
                   display: block;
               } 
           </style> 
-          <div id="chart_div"></div>
+          <canvas id="gauge"></canvas>
       `;
 
   class pGauge extends HTMLElement {
@@ -618,7 +618,7 @@ window.Gauge = Gauge;
           console.log("this._props prop = ", this._props);
           this._props = { ...this._props, ...changedProperties };
 
-          var ctx = this.shadowRoot.getElementById('chart_div');
+          var ctx = this.shadowRoot.getElementById('gauge');
 
           var myProps = this._props
           
