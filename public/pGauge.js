@@ -547,8 +547,8 @@ window.Gauge = Gauge;
   needle: { start: '#f00', end: '#f00' }
   }
   });
- // gauge.setValue(30); // set the needle value
- // gauge.draw();
+  gauge.setValue(30); // set the needle value
+  gauge.draw();
 
   //Resizes the gauge when the screen size changes
   window.onresize = function () {
