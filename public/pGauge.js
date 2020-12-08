@@ -327,7 +327,7 @@ Matt Gauge JS
     p = y = b.minValue;
     if (!b.renderTo) throw Error("Canvas element was not specified when creating the Gauge object!");
     var z = b.renderTo.tagName ? b.renderTo : document.getElementById(b.renderTo),
-        a = document.getElementById("gauge").getContext("2d"),
+        a = z.getContext("2d"),
         A,
         C,
         D,
@@ -590,6 +590,7 @@ window.Gauge = Gauge;
               } 
           </style> 
           <canvas id="gauge"></canvas>
+          <H1>HELLO</H1>
       `;
 
   class pGauge extends HTMLElement {
@@ -622,19 +623,11 @@ window.Gauge = Gauge;
 
           var myProps = this._props
           
-        //   google.charts.load('current', {'packages':['gauge']});
-        //   google.charts.setOnLoadCallback(function() {
-        //       drawChart(myProps);
-        //  });
           console.log("changedProperties = ", changedProperties);
 
           function drawChart(props) {
               console.log("props =", props)
-           //   var data = google.visualization.arrayToDataTable([
-            //   ['Label', 'Value'],
-            //   [props.label, props.value]
-            //   ]);
-
+ 
               var options = {
               chartArea: {
                   // leave room for y-axis labels
@@ -649,10 +642,9 @@ window.Gauge = Gauge;
               minorTicks: 5
               };
 
-            //  var chart = new google.visualization.Gauge(ctx);
-
-            gauge.setValue(30); // set the needle value
-            gauge.draw();
+ 
+            //gauge.setValue(30); // set the needle value
+            //gauge.draw();
           }
       }
   }
