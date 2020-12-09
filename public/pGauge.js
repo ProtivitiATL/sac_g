@@ -34,7 +34,7 @@
       }
 
       onCustomWidgetAfterUpdate(changedProperties) {
-          console.log("onCustomWidgetAfterUpdate")
+          console.log(">>> onCustomWidgetAfterUpdate")
           console.log("this._props prop = ", this._props);
           this._props = { ...this._props, ...changedProperties };
 
@@ -61,7 +61,8 @@
               minorTicks: 5
               };
 
-              funcOnload();
+              //funcOnload();
+              console.log(">>>> before");
            gauge.setValue(42); // set the needle value
            gauge.draw();
           }
@@ -609,7 +610,7 @@ window.Gauge = Gauge;
 
         // 1
         console.log(">>> In onload <<<");
-        
+
         var myWidth = 400; //WindowSize("Width") / 2;
         var myHeight = 400; //WindowSize("Height") / 2;
 
