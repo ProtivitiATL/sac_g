@@ -61,9 +61,9 @@
               minorTicks: 5
               };
 
- 
-            gauge.setValue(42); // set the needle value
-            gauge.draw();
+              funcOnload();
+         //   gauge.setValue(42); // set the needle value
+         //   gauge.draw();
           }
       }
   }
@@ -585,41 +585,6 @@ domReady(function () {
 });
 window.Gauge = Gauge;
 
-// 1
-  var myWidth = 400; //WindowSize("Width") / 2;
-  var myHeight = 400; //WindowSize("Height") / 2;
-
-  var gauge = new Gauge({
-  renderTo: 'gauge',
-  width: myWidth,
-  height: myHeight,
-  glow: true,
-  units: 'Loans',
-  title: 'Protiviti',
-  minValue: 0,
-  maxValue: 100,
-  majorTicks: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],//,'11', 'T', '12', '13', '14','15'],
-  minorTicks: 5,
-  strokeTicks: false,
-  highlights: [
-  { from: 0, to: 30, color: 'white' },
-  { from: 30, to: 40, color: '#addd8e' },
-  { from: 40, to: 60, color: 'white' },
-  { from: 60, to: 80, color: '#feb24c' },
-  { from: 80, to: 100, color: 'red' },
- ],
-  colors: {
-  plate: 'white',
-  majorTicks: '#222',
-  minorTicks: '#222',
-  title: '#222',
-  units: '#222',
-  numbers: '#222',
-  needle: { start: '#f00', end: '#f00' }
-  }
-  });
-  //gauge.setValue(30); // set the needle value
-  //gauge.draw();
 
   //Resizes the gauge when the screen size changes
   window.onresize = function () {
@@ -641,12 +606,43 @@ window.Gauge = Gauge;
 
   //This function is just setup so I can call multiple other functions of body load
   function funcOnload() {
-    var TachoHighlightGreen = getCookie("TachoHighlightGreenCookie");
-    var TachoHighlightYellow = getCookie("TachoHighlightYellowCookie");
-    var TachoHighlightRed = getCookie("TachoHighlightRedCookie");
-  //GetArduinoInputs();
-  //GetActFreq();
-  //UpdateVariables(1); //Load the variables into the imput boxes on page load
+
+        // 1
+        var myWidth = 400; //WindowSize("Width") / 2;
+        var myHeight = 400; //WindowSize("Height") / 2;
+
+        var gauge = new Gauge({
+        renderTo: 'gauge',
+        width: myWidth,
+        height: myHeight,
+        glow: true,
+        units: 'Loans',
+        title: 'Protiviti',
+        minValue: 0,
+        maxValue: 100,
+        majorTicks: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],//,'11', 'T', '12', '13', '14','15'],
+        minorTicks: 5,
+        strokeTicks: false,
+        highlights: [
+        { from: 0, to: 30, color: 'white' },
+        { from: 30, to: 40, color: '#addd8e' },
+        { from: 40, to: 60, color: 'white' },
+        { from: 60, to: 80, color: '#feb24c' },
+        { from: 80, to: 100, color: 'red' },
+        ],
+        colors: {
+        plate: 'white',
+        majorTicks: '#222',
+        minorTicks: '#222',
+        title: '#222',
+        units: '#222',
+        numbers: '#222',
+        needle: { start: '#f00', end: '#f00' }
+        }
+        });
+        gauge.setValue(47); // set the needle value
+        gauge.draw();
+
 
   }
   
