@@ -1,3 +1,74 @@
+ //
+  // Start template
+  //
+  let template = document.createElement("template");
+  template.innerHTML = `
+          <style>
+              :host {
+                  display: block;
+              } 
+          </style> 
+          <canvas id="gauge"></canvas>
+          <H1>HELLO</H1>
+      `;
+
+  class pGauge extends HTMLElement {
+      constructor() {
+          super(); 
+          let shadowRoot = this.attachShadow({mode: "open"});
+          shadowRoot.appendChild(template.content.cloneNode(true));
+          this.addEventListener("click", event => {
+              var event = new Event("onClick");
+              this.dispatchEvent(event);
+          });
+          this._props = {};
+      }
+
+      connectedCallback(){
+          
+      }
+
+      onCustomWidgetBeforeUpdate(changedProperties) {
+          this._props = { ...this._props, ...changedProperties };
+
+      }
+
+      onCustomWidgetAfterUpdate(changedProperties) {
+          console.log("onCustomWidgetAfterUpdate")
+          console.log("this._props prop = ", this._props);
+          this._props = { ...this._props, ...changedProperties };
+
+          var ctx = this.shadowRoot.getElementById('gauge');
+
+          var myProps = this._props
+          
+          console.log("changedProperties = ", changedProperties);
+
+          function drawChart(props) {
+              console.log("props =", props)
+ 
+              var options = {
+              chartArea: {
+                  // leave room for y-axis labels
+                  width: '94%'
+                  },
+                  legend: {
+                  position: 'top'
+                  },
+                  width: '100%',
+              redFrom: props.redFrom, redTo: props.redTo,
+              yellowFrom:props.yellowFrom, yellowTo: props.yellowTo,
+              minorTicks: 5
+              };
+
+ 
+            gauge.setValue(30); // set the needle value
+            gauge.draw();
+          }
+      }
+  }
+
+  customElements.define("com-protiviti-pgauge", pGauge);
 /********************************************************************************************
 Matt Gauge JS
   *********************************************************************************************/
@@ -579,74 +650,4 @@ window.Gauge = Gauge;
 
   }
   
-  //
-  // Start template
-  //
-  let template = document.createElement("template");
-  template.innerHTML = `
-          <style>
-              :host {
-                  display: block;
-              } 
-          </style> 
-          <canvas id="gauge"></canvas>
-          <H1>HELLO</H1>
-      `;
-
-  class pGauge extends HTMLElement {
-      constructor() {
-          super(); 
-          let shadowRoot = this.attachShadow({mode: "open"});
-          shadowRoot.appendChild(template.content.cloneNode(true));
-          this.addEventListener("click", event => {
-              var event = new Event("onClick");
-              this.dispatchEvent(event);
-          });
-          this._props = {};
-      }
-
-      connectedCallback(){
-          
-      }
-
-      onCustomWidgetBeforeUpdate(changedProperties) {
-          this._props = { ...this._props, ...changedProperties };
-
-      }
-
-      onCustomWidgetAfterUpdate(changedProperties) {
-          console.log("onCustomWidgetAfterUpdate")
-          console.log("this._props prop = ", this._props);
-          this._props = { ...this._props, ...changedProperties };
-
-          var ctx = this.shadowRoot.getElementById('gauge');
-
-          var myProps = this._props
-          
-          console.log("changedProperties = ", changedProperties);
-
-          function drawChart(props) {
-              console.log("props =", props)
  
-              var options = {
-              chartArea: {
-                  // leave room for y-axis labels
-                  width: '94%'
-                  },
-                  legend: {
-                  position: 'top'
-                  },
-                  width: '100%',
-              redFrom: props.redFrom, redTo: props.redTo,
-              yellowFrom:props.yellowFrom, yellowTo: props.yellowTo,
-              minorTicks: 5
-              };
-
- 
-            //gauge.setValue(30); // set the needle value
-            //gauge.draw();
-          }
-      }
-  }
-
-  customElements.define("com-protiviti-pgauge", pGauge);
