@@ -387,7 +387,7 @@ Matt Gauge JS
     p = y = b.minValue;
     if (!b.renderTo) throw Error("Canvas element was not specified when creating the Gauge object!");
     var z = b.renderTo.tagName ? b.renderTo : document.getElementById(b.renderTo),
-        a = zdocument.getElementById("gauge").getContext("2d"),
+        a = document.getElementById("gauge").getContext("2d"),
         A,
         C,
         D,
