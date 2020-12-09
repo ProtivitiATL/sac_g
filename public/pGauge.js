@@ -62,8 +62,8 @@
               };
 
               funcOnload();
-         //   gauge.setValue(42); // set the needle value
-         //   gauge.draw();
+           gauge.setValue(42); // set the needle value
+           gauge.draw();
           }
       }
   }
@@ -398,7 +398,7 @@ Matt Gauge JS
     p = y = b.minValue;
     if (!b.renderTo) throw Error("Canvas element was not specified when creating the Gauge object!");
     var z = b.renderTo.tagName ? b.renderTo : document.getElementById(b.renderTo),
-        a = document.getElementById("gauge").getContext("2d"),
+        a = z.getContext("2d"),
         A,
         C,
         D,
@@ -608,6 +608,8 @@ window.Gauge = Gauge;
   function funcOnload() {
 
         // 1
+        console.log(">>> In onload <<<");
+        
         var myWidth = 400; //WindowSize("Width") / 2;
         var myHeight = 400; //WindowSize("Height") / 2;
 
