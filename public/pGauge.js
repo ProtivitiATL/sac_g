@@ -42,7 +42,7 @@
 
           var myProps = this._props
           
-          console.log("changedProperties = ", changedProperties);
+          console.log(">>>>> changedProperties = ", changedProperties);
 
           function drawChart(props) {
               console.log("props =", props)
@@ -479,7 +479,7 @@ Gauge.initialized = !1;
     var b = document,
         l = b.getElementsByTagName("head")[0],
         q = -1 != navigator.userAgent.toLocaleLowerCase().indexOf("msie"),
-        v = "", //"@font-face {font-family: 'Led';src: url('https://smart-ip.net/styles/fonts/digital-7-mono." + (q ? "eot" : "ttf") + "');}",
+        v = "@font-face {font-family: 'Led'}", //;src: url('https://smart-ip.net/styles/fonts/digital-7-mono." + (q ? "eot" : "ttf") + "');}",
         k = b.createElement("style");
     k.type = "text/css";
     if (q) l.appendChild(k), (l = k.styleSheet), (l.cssText = v);
