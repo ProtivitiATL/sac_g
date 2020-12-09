@@ -52,6 +52,8 @@
            gauge.setValue(42); // set the needle value
            gauge.draw();
           }
+
+          drawChart();
       }
   }
 
