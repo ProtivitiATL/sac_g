@@ -53,7 +53,7 @@
            gauge.draw();
           }
 
-          drawChart();
+          funcOnload();
       }
   }
 
