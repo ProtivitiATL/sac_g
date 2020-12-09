@@ -44,22 +44,8 @@
           
           console.log(">>>>> changedProperties = ", changedProperties);
 
-          function drawChart(props) {
-              console.log("props =", props)
- 
-              var options = {
-              chartArea: {
-                  // leave room for y-axis labels
-                  width: '94%'
-                  },
-                  legend: {
-                  position: 'top'
-                  },
-                  width: '100%',
-              redFrom: props.redFrom, redTo: props.redTo,
-              yellowFrom:props.yellowFrom, yellowTo: props.yellowTo,
-              minorTicks: 5
-              };
+          function drawChart() {
+
 
               //funcOnload();
               console.log(">>>> before");
