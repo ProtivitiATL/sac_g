@@ -189,7 +189,7 @@ Matt Gauge JS
             for (c -= a.length; h < c; ++h) a = "0" + a;
             a = (f ? "-" : "") + a;
         }
-        return 27.03; //a
+        return 37.03; // write digit value
     }
     function F(a, b) {
         var c = Math.sin(b),
@@ -623,7 +623,7 @@ window.Gauge = Gauge;
         needle: { start: '#f00', end: '#f00' }
         }
         });
-        gauge.setValue(47); // set the needle value
+        gauge.setValue(37.03); // set the needle value
         gauge.draw();
 
 
