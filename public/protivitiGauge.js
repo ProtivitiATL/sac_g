@@ -54,7 +54,7 @@
                         console.log("changedProperties");
                         
 						var myChart = new RadialGauge({
-                            renderTo: 'gauge1',
+                            renderTo: 'myChart',
                             width: 400,
                             height: 400,
                             units: 'Km/h',
@@ -105,7 +105,7 @@
 			var ctx = this.shadowRoot.getElementById('myChart');
 						console.log("changedProperties");
 						var myChart = new RadialGauge({
-                            renderTo: 'gauge1',
+                            renderTo: 'myChart',
                             width: 400,
                             height: 400,
                             units: 'Km/h',
