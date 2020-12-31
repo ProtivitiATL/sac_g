@@ -104,7 +104,7 @@
 
 			var ctx = this.shadowRoot.getElementById('myChart');
 						console.log("changedProperties");
-						var myChart = new new RadialGauge({
+						var myChart = new RadialGauge({
                             renderTo: 'gauge1',
                             width: 400,
                             height: 400,
