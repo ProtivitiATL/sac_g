@@ -33,7 +33,7 @@
 	let template = document.createElement("template");
 	template.innerHTML = `
 		<div id="myDiv">
-			<canvas id="myChart" width="400" height="400"></canvas>
+			<canvas id="gauge" width="400" height="400"></canvas>
 		</div>
 	`;
 
@@ -50,11 +50,11 @@
 		}
 
 		connectedCallback(){
-			var ctx = this.shadowRoot.getElementById('myChart');
+			var ctx = this.shadowRoot.getElementById('gauge');
                         console.log("changedProperties");
                         
 						var myChart = new RadialGauge({
-                            renderTo: 'myChart',
+                            renderTo: 'gauge',
                             width: 400,
                             height: 400,
                             units: 'Km/h',
@@ -102,10 +102,10 @@
 				this.style["opacity"] = changedProperties["opacity"];
 			}
 
-			var ctx = this.shadowRoot.getElementById('myChart');
+			var ctx = this.shadowRoot.getElementById('gauge');
 						console.log("changedProperties");
 						var myChart = new RadialGauge({
-                            renderTo: 'myChart',
+                            renderTo: 'gauge',
                             width: 400,
                             height: 400,
                             units: 'Km/h',
