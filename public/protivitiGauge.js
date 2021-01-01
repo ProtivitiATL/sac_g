@@ -1234,7 +1234,7 @@
                         })
                     }), r.version = ke, r.type = e[a] || n, r.initialized = !1, t.minValue = parseFloat(t.minValue), t.maxValue = parseFloat(t.maxValue), t.value = parseFloat(t.value) || 0, t.borders || (t.borderInnerWidth = t.borderMiddleWidth = t.borderOuterWidth = 0), !t.renderTo) throw TypeError("Canvas element was not specified when creating the Gauge object!");
                 var l = t.renderTo.tagName ? t.renderTo : document.getElementById(t.renderTo);
-                if (!(l instanceof HTMLCanvasElement)) throw TypeError("Given gauge canvas element is invalid!");
+ //               if (!(l instanceof HTMLCanvasElement)) throw TypeError("Given gauge canvas element is invalid!");
                 return t.width = parseFloat(t.width) || 0, t.height = parseFloat(t.height) || 0, t.width && t.height || (t.width || (t.width = l.parentNode ? l.parentNode.offsetWidth : l.offsetWidth), t.height || (t.height = l.parentNode ? l.parentNode.offsetHeight : l.offsetHeight)), r.options = t || {}, r.options.animateOnInit && (r._value = r.options.value, r.options.value = r.options.minValue), r.canvas = new pe(l, t.width, t.height), r.canvas.onRedraw = r.draw.bind(r), r.animation = new ge(t.animationRule, t.animationDuration), r
             }
             return r(n, t), ue(n, [{
