@@ -140,5 +140,5 @@
 		}
 	}
 
-	customElements.define("com-pro-protivitiGauge", protivitiGauge);
+	customElements.define("com-pro-protivitigauge", protivitiGauge);
 })();
