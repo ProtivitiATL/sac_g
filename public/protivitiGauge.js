@@ -1,5 +1,4 @@
 (function() { 
-//
         /*!
         * The MIT License (MIT)
         * 
@@ -27,7 +26,7 @@
         */
        ! function(e) {
         "use strict";
-   
+
         function t(e) {
             if (Array.isArray(e)) {
                 for (var t = 0, i = Array(e.length); t < e.length; t++) i[t] = e[t];
@@ -35,12 +34,12 @@
             }
             return Array.from(e)
         }
-   
+
         function i(e, t) {
             if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
             return !t || "object" != typeof t && "function" != typeof t ? e : t
         }
-   
+
         function r(e, t) {
             if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
             e.prototype = Object.create(t && t.prototype, {
@@ -52,11 +51,11 @@
                 }
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
-   
+
         function o(e, t) {
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
-   
+
         function n(e, t) {
             if (t || (t = "undefined" == typeof window ? global : window), void 0 !== t[e]) return t[e];
             for (var i = ["webkit", "moz", "ms", "o"], r = 0, o = i.length, n = e.charAt(0).toUpperCase() + e.substr(1); r < o; r++) {
@@ -65,7 +64,7 @@
             }
             return null
         }
-   
+
         function a(e, t, i, r, o, n, l) {
             if ("function" != typeof r) throw new TypeError("Invalid animation rule:", r);
             var s = e - i,
@@ -75,30 +74,30 @@
                 return a(e, t, i, r, o, n, l)
             }) : (n && n(), l.inProgress = !1)
         }
-   
+
         function l() {
             Array.prototype.constructor.apply(this, arguments)
         }
-   
+
         function s(e) {
             if (!(e instanceof DOMException && 2152923147 === e.result)) throw e
         }
-   
+
         function d(e, t) {
             return t.replace(Ve, function(t, i) {
                 var r = e[i];
                 return void 0 !== r ? r : t
             })
         }
-   
+
         function c(e) {
             return e.majorTicks instanceof Array || (e.majorTicks = e.majorTicks ? [e.majorTicks] : []), e.majorTicks.length || (e.majorTicks.push(We.formatMajorTickNumber(e.minValue, e)), e.majorTicks.push(We.formatMajorTickNumber(e.maxValue, e))), ["right" !== e.tickSide, "left" !== e.tickSide]
         }
-   
+
         function h(e, t, i, r, o, n) {
             e.beginPath(), e.moveTo(t + n, i), e.lineTo(t + r - n, i), e.quadraticCurveTo(t + r, i, t + r, i + n), e.lineTo(t + r, i + o - n), e.quadraticCurveTo(t + r, i + o, t + r - n, i + o), e.lineTo(t + n, i + o), e.quadraticCurveTo(t, i + o, t, i + o - n), e.lineTo(t, i + n), e.quadraticCurveTo(t, i, t + n, i), e.closePath()
         }
-   
+
         function u(e, t) {
             var i = t.valueDec,
                 r = t.valueInt,
@@ -115,54 +114,54 @@
             }
             return a
         }
-   
+
         function f(e, t) {
             var i = void 0,
                 r = !1;
             return i = 0 === t.majorTicksDec ? Math.round(e).toString() : e.toFixed(t.majorTicksDec), t.majorTicksInt > 1 ? (r = ~i.indexOf("."), ~i.indexOf("-") ? "-" + [t.majorTicksInt + t.majorTicksDec + 2 + (r ? 1 : 0) - i.length].join("0") + i.replace("-", "") : [t.majorTicksInt + t.majorTicksDec + 1 + (r ? 1 : 0) - i.length].join("0") + i) : i
         }
-   
+
         function m(e) {
             return e * Math.PI / 180
         }
-   
+
         function v(e, t) {
             return {
                 x: -e * Math.sin(t),
                 y: e * Math.cos(t)
             }
         }
-   
+
         function g(e, t, i, r) {
             var o = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
                 n = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
                 a = e.createLinearGradient(o ? 0 : n, o ? n : 0, o ? 0 : r, o ? r : 0);
             return a.addColorStop(0, t), a.addColorStop(1, i), a
         }
-   
+
         function b(e, t) {
             if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) return e.restore(), !0;
             e.save();
             var i = t.borderShadowWidth;
             return i && (e.shadowBlur = i, e.shadowColor = t.colorBorderShadow), !0
         }
-   
+
         function p(e, t) {
             t.needleShadow && (e.shadowOffsetX = 2, e.shadowOffsetY = 2, e.shadowBlur = 10, e.shadowColor = t.colorNeedleShadowDown)
         }
-   
+
         function w(e, t, i) {
             return e["font" + t + "Style"] + " " + e["font" + t + "Weight"] + " " + e["font" + t + "Size"] * i + "px " + e["font" + t]
         }
-   
+
         function k(e) {
             e.shadowOffsetX = null, e.shadowOffsetY = null, e.shadowBlur = null, e.shadowColor = "", e.strokeStyle = null, e.lineWidth = 0, e.save()
         }
-   
+
         function y(e, t, i, r) {
             t.valueTextShadow && (e.shadowOffsetX = i, e.shadowOffsetY = i, e.shadowBlur = r, e.shadowColor = t.colorValueTextShadow)
         }
-   
+
         function x(e, t, i, r, o, n) {
             if (t.valueBox) {
                 k(e);
@@ -196,7 +195,7 @@
                 t.colorValueBoxShadow && (e.shadowBlur = 1.2 * c, e.shadowColor = t.colorValueBoxShadow), t.colorValueBoxBackground && (e.fillStyle = t.colorValueBoxBackground, e.fill()), e.closePath(), e.restore(), y(e, t, f, m), e.fillStyle = t.colorValueText, e.textAlign = "center", e.textBaseline = "alphabetic", e.fillText(s, W + x / 2, o + T / 2 - g / 3), e.restore()
             }
         }
-   
+
         function T(e) {
             var t = e.value,
                 i = e.minValue,
@@ -207,16 +206,16 @@
                 indented: t < i ? i - o : t > r ? r + o : t
             }
         }
-   
+
         function S(e, t, i, r, o) {
             i.beginPath(), i.arc(0, 0, xe(e), 0, 2 * Oe, !0), i.lineWidth = t, i.strokeStyle = o ? We.linearGradient(i, r, o, e) : r, i.stroke(), i.closePath()
         }
-   
+
         function V(e, t) {
             var i = pe.pixelRatio;
             return e.maxRadius || (e.maxRadius = e.max - t.borderShadowWidth - t.borderOuterWidth * i - t.borderMiddleWidth * i - t.borderInnerWidth * i + (t.borderOuterWidth ? .5 : 0) + (t.borderMiddleWidth ? .5 : 0) + (t.borderInnerWidth ? .5 : 0)), e.maxRadius
         }
-   
+
         function W(e, t) {
             var i = pe.pixelRatio,
                 r = t.borderShadowWidth * i,
@@ -228,7 +227,7 @@
                 d = !1;
             e.save(), t.borderOuterWidth && (d = We.drawShadow(e, t, d), S(o, t.borderOuterWidth * i, e, t.colorBorderOuter, t.colorBorderOuterEnd)), t.borderMiddleWidth && (d = We.drawShadow(e, t, d), S(n, t.borderMiddleWidth * i, e, t.colorBorderMiddle, t.colorBorderMiddleEnd)), t.borderInnerWidth && (d = We.drawShadow(e, t, d), S(a, t.borderInnerWidth * i, e, t.colorBorderInner, t.colorBorderInnerEnd)), We.drawShadow(e, t, d), e.beginPath(), e.arc(0, 0, xe(l), 0, 2 * Oe, !0), t.colorPlateEnd ? (s = e.createRadialGradient(0, 0, l / 2, 0, 0, l), s.addColorStop(0, t.colorPlate), s.addColorStop(1, t.colorPlateEnd)) : s = t.colorPlate, e.fillStyle = s, e.fill(), e.closePath(), e.restore()
         }
-   
+
         function O(e, t) {
             var i = e.max * (parseFloat(t.highlightsWidth) || 0) / 100;
             if (i) {
@@ -242,7 +241,7 @@
                 }
             }
         }
-   
+
         function A(e, t) {
             var i = P(e, t),
                 r = void 0,
@@ -254,12 +253,12 @@
                 d = t.ticksAngle / (t.maxValue - t.minValue);
             for (e.lineWidth = pe.pixelRatio, e.strokeStyle = t.colorMinorTicks || t.colorStrokeTicks, e.save(), t.exactTicks ? (o = t.maxValue - t.minValue, r = s ? o / s : 0, l = (Se.mod(t.majorTicks[0], s) || 0) * d) : r = s * (t.majorTicks.length - 1); a < r; ++a)(n = t.startAngle + l + a * (t.ticksAngle / r)) <= t.ticksAngle + t.startAngle && (e.rotate(We.radians(n)), e.beginPath(), e.moveTo(0, i), e.lineTo(0, i - .075 * e.max), C(e))
         }
-   
+
         function P(e, t) {
             var i = e.max / 100;
             return V(e, t) - 5 * i - (t.barWidth ? 2 * (parseFloat(t.barStrokeWidth) || 0) + ((parseFloat(t.barWidth) || 0) + 5) * i : 0)
         }
-   
+
         function M(e, t) {
             We.prepareTicks(t);
             var i = xe(P(e, t)),
@@ -270,7 +269,7 @@
             for (e.lineWidth = 2 * a, e.save(), o = t.colorMajorTicks instanceof Array ? t.colorMajorTicks : new Array(n).fill(t.colorStrokeTicks || t.colorMajorTicks), r = 0; r < n; ++r) e.strokeStyle = o[r], e.rotate(We.radians(B(t, t.exactTicks ? t.majorTicks[r] : r, n))), e.beginPath(), e.moveTo(0, i), e.lineTo(0, i - .15 * e.max), C(e);
             t.strokeTicks && (e.strokeStyle = t.colorStrokeTicks || o[0], e.rotate(Ae), e.beginPath(), e.arc(0, 0, i, We.radians(t.startAngle), We.radians(t.startAngle + t.ticksAngle), !1), C(e))
         }
-   
+
         function B(e, t, i) {
             if (e.exactTicks) {
                 var r = e.ticksAngle / (e.maxValue - e.minValue);
@@ -278,11 +277,11 @@
             }
             return e.startAngle + t * (e.ticksAngle / (i - 1))
         }
-   
+
         function C(e) {
             e.stroke(), e.restore(), e.closePath(), e.save()
         }
-   
+
         function j(e, t) {
             var i = P(e, t) - .15 * e.max,
                 r = {},
@@ -301,15 +300,15 @@
             }
             a && e.restore()
         }
-   
+
         function N(e, t) {
             t.title && (e.save(), e.font = We.font(t, "Title", e.max / 200), e.fillStyle = t.colorTitle, e.textAlign = "center", e.fillText(t.title, 0, -e.max / 4.25, .8 * e.max), e.restore())
         }
-   
+
         function E(e, t) {
             t.units && (e.save(), e.font = We.font(t, "Units", e.max / 200), e.fillStyle = t.colorUnits, e.textAlign = "center", e.fillText(We.formatContext(t, t.units), 0, e.max / 3.25, .8 * e.max), e.restore())
         }
-   
+
         function _(e, t) {
             if (t.needle) {
                 var i = t.ticksAngle < 360 ? We.normalizedValue(t).indented : t.value,
@@ -327,11 +326,11 @@
                 e.save(), We.drawNeedleShadow(e, t), e.rotate(We.radians(r)), e.fillStyle = We.linearGradient(e, t.colorNeedle, t.colorNeedleEnd, l - s), "arrow" === t.needleType ? (e.beginPath(), e.moveTo(-c, -s), e.lineTo(-d, 0), e.lineTo(-1 * h, l), e.lineTo(h, l), e.lineTo(d, 0), e.lineTo(c, -s), e.closePath(), e.fill(), e.beginPath(), e.lineTo(-.5 * h, l), e.lineTo(-1 * h, l), e.lineTo(-d, 0), e.lineTo(-c, -s), e.lineTo(c / 2 * h - 2 * h, -s), e.closePath(), e.fillStyle = t.colorNeedleShadowUp, e.fill()) : (e.beginPath(), e.moveTo(-c, l), e.lineTo(-c, s), e.lineTo(c, s), e.lineTo(c, l), e.closePath(), e.fill()), t.needleCircleSize && (e.restore(), We.drawNeedleShadow(e, t), t.needleCircleOuter && (e.beginPath(), e.arc(0, 0, n, 0, 2 * Oe, !0), e.fillStyle = We.linearGradient(e, t.colorNeedleCircleOuter, t.colorNeedleCircleOuterEnd, n), e.fill(), e.closePath()), t.needleCircleInner && (e.beginPath(), e.arc(0, 0, a, 0, 2 * Oe, !0), e.fillStyle = We.linearGradient(e, t.colorNeedleCircleInner, t.colorNeedleCircleInnerEnd, a), e.fill(), e.closePath()), e.restore())
             }
         }
-   
+
         function R(e, t, i) {
             We.drawValueBox(e, t, i, 0, e.max - .33 * e.max, e.max)
         }
-   
+
         function I(e) {
             var t = e.startAngle,
                 i = e.startAngle + e.ticksAngle,
@@ -346,7 +345,7 @@
                 endAngle: o
             }
         }
-   
+
         function D(e, t) {
             var i = e.max / 100,
                 r = V(e, t) - 5 * i,
@@ -366,19 +365,19 @@
             }
             e.restore()
         }
-   
+
         function z(e) {
             return e.options.animatedValue ? e.options.value : e.value
         }
-   
+
         function L(e, t, i, r, o, n, a, l) {
             e.beginPath(), e.fillStyle = l ? We.linearGradient(e, a, l, o > n ? o : n, n > o, o > n ? i : r) : a, t > 0 ? We.roundRect(e, i, r, o, n, t) : e.rect(i, r, o, n), e.fill(), e.closePath()
         }
-   
+
         function G(e, t, i, r, o, n, a, l, s) {
             e.beginPath(), e.lineWidth = t, e.strokeStyle = s ? We.linearGradient(e, l, s, a, !0, o) : l, i > 0 ? We.roundRect(e, r, o, n, a, i) : e.rect(r, o, n, a), e.stroke(), e.closePath()
         }
-   
+
         function F(e, t, i, r, o, n) {
             var a = pe.pixelRatio;
             e.save();
@@ -401,7 +400,7 @@
                 T = !1;
             return t.borderOuterWidth && (T = We.drawShadow(e, t, T), G(e, t.borderOuterWidth * a, l, i + t.borderOuterWidth * a / 2 - x, r + t.borderOuterWidth * a / 2 - x, s, u, t.colorBorderOuter, t.colorBorderOuterEnd), x += .5 * a), t.borderMiddleWidth && (T = We.drawShadow(e, t, T), G(e, t.borderMiddleWidth * a, l -= 1 + 2 * x, g + t.borderMiddleWidth * a / 2 - x, w + t.borderMiddleWidth * a / 2 - x, d + 2 * x, f + 2 * x, t.colorBorderMiddle, t.colorBorderMiddleEnd), x += .5 * a), t.borderInnerWidth && (T = We.drawShadow(e, t, T), G(e, t.borderInnerWidth * a, l -= 1 + 2 * x, b + t.borderInnerWidth * a / 2 - x, k + t.borderInnerWidth * a / 2 - x, c + 2 * x, m + 2 * x, t.colorBorderInner, t.colorBorderInnerEnd), x += .5 * a), We.drawShadow(e, t, T), L(e, l, p, y, h + 2 * x, v + 2 * x, t.colorPlate, t.colorPlateEnd), e.restore(), [p, y, h, v]
         }
-   
+
         function X(e, t, i, r, o, n) {
             var a = pe.pixelRatio,
                 l = n >= o,
@@ -449,7 +448,7 @@
                 ticksPadding: t.ticksPadding / 100
             }, e.barDimensions
         }
-   
+
         function Y(e, t, i, r, o, n, a) {
             var l = X(e, t, r, o, n, a),
                 s = l.isVertical,
@@ -486,19 +485,19 @@
             }
             "progress" !== i && t.barStrokeWidth && (e.lineWidth = u, e.strokeStyle = t.colorBarStroke, e.stroke()), "progress" !== i && t.colorBar ? (e.fillStyle = t.colorBarEnd ? We.linearGradient(e, t.colorBar, t.colorBarEnd, h, s, s ? p : b) : t.colorBar, e.fill()) : "progress" === i && t.colorBarProgress && (e.fillStyle = t.colorBarProgressEnd ? We.linearGradient(e, t.colorBarProgress, t.colorBarProgressEnd, w, s, s ? p : b) : t.colorBarProgress, e.fill()), e.closePath(), t.barBeginCircle && (e.barDimensions.radius += u), e.barDimensions.barWidth += u, e.barDimensions.barLength += u
         }
-   
+
         function U(e, t, i, r, o, n) {
             Y(e, t, "", i, r, o, n)
         }
-   
+
         function q(e, t) {
             return t.needleSide !== e || t.tickSide !== e || t.numberSide !== e
         }
-   
+
         function H(e, t, i, r, o, n) {
             t.barProgress && Y(e, t, "progress", i, r, o, n)
         }
-   
+
         function J(e, t) {
             var i = e.barDimensions,
                 r = i.isVertical,
@@ -532,11 +531,11 @@
                 }
             }
         }
-   
+
         function Z(e, t, i, r, o) {
             e.beginPath(), e.moveTo(t, i), e.lineTo(r, o), e.stroke(), e.closePath(), e.save()
         }
-   
+
         function $(e, t, i, r, o, n, a, l, s) {
             var d = e.barDimensions,
                 c = d.isVertical,
@@ -563,7 +562,7 @@
             e.lineWidth = l * v, e.save();
             for (var B = w / (o - r); S < V; S++) W = i[S], e.strokeStyle = M[S], c ? (T = p + h - m - f + (r - W) * B, n && (x = b + A, Z(e, x, T, ye(x - O), T)), a && (x = b + P, Z(e, x, T, ye(x - O), T))) : (x = b + m + f - (r - W) * B, n && (T = p + A, Z(e, x, T, x, ye(T - O))), a && (T = p + P, Z(e, x, ye(T), x, T - O)))
         }
-   
+
         function K(e, t) {
             var i = We.prepareTicks(t),
                 r = de(i, 2),
@@ -596,11 +595,11 @@
                 e.strokeStyle = t.colorStrokeTicks || s[0], a *= w, c ? (S = b + h - m - v + a / 2, W = S - p - a, o && (V = T = ye(g + x), Q(e, T, S, V, W)), n && (V = T = ye(g + y), Q(e, T, S, V, W))) : (T = g + m + v - a / 2, V = T + p + a, o && (W = S = ye(b + x), Q(e, T, S, V, W)), n && (W = S = ye(b + y), Q(e, T, S, V, W)))
             }
         }
-   
+
         function Q(e, t, i, r, o) {
             e.beginPath(), e.moveTo(t, i), e.lineTo(r, o), e.stroke(), e.closePath()
         }
-   
+
         function ee(e, t) {
             var i = We.prepareTicks(t),
                 r = de(i, 2),
@@ -617,7 +616,7 @@
                     for (; l < t.maxValue; l += d) a.push(l);
             $(e, t.colorMinorTicks || t.colorStrokeTicks, a, t.minValue, t.maxValue, o, n, 1, t.ticksWidthMinor / 100)
         }
-   
+
         function te(e, t) {
             var i = e.barDimensions,
                 r = i.isVertical,
@@ -651,7 +650,7 @@
                 P = t.numbersMargin / 100 * n;
             for (e.font = We.font(t, "Numbers", n / 200), e.lineWidth = 0, e.textAlign = "center"; k < g; k++) e.fillStyle = A[k], O = t.majorTicks[k], W = t.exactTicks ? h * ((v[k] - t.minValue) / f) : k * h / (g - 1), r ? (V = c + o - l - s - W + w / 3, b && (e.textAlign = "right", e.fillText(O, d + x - P, V)), p && (e.textAlign = "left", e.fillText(O, d + T + P, V))) : (e.measureText(O).width, S = d + l + s + W, b && e.fillText(O, S, c + x - P), p && e.fillText(O, S, c + T + w + P))
         }
-   
+
         function ie(e, t) {
             if (t.title) {
                 var i = e.barDimensions,
@@ -667,7 +666,7 @@
                 e.save(), e.textAlign = "center", e.fillStyle = t.colorTitle, e.font = We.font(t, "Title", o / 200), e.lineWidth = 0, e.fillText(t.title, c, h, r ? o : n)
             }
         }
-   
+
         function re(e, t) {
             if (t.units) {
                 var i = e.barDimensions,
@@ -683,7 +682,7 @@
                 e.save(), e.textAlign = "center", e.fillStyle = t.colorUnits, e.font = We.font(t, "Units", o / 200), e.lineWidth = 0, e.fillText(We.formatContext(t, t.units), c, h, r ? o : n)
             }
         }
-   
+
         function oe(e, t) {
             if (t.needle) {
                 var i = e.barDimensions,
@@ -715,15 +714,15 @@
                 e.save(), We.drawNeedleShadow(e, t), r ? (y = ye(h + n - s - l - v), f && (w = ye(c + W), k = w + p, T(e, t, w, y, k, y, p)), m && (w = ye(c + O), k = w - p, T(e, t, w, y, k, y, p, !0))) : (w = ye(c + s + l + v), f && (y = ye(h + W), x = y + p, T(e, t, w, y, w, x, p)), m && (y = ye(h + O), x = y - p, T(e, t, w, y, w, x, p, !0))), e.restore()
             }
         }
-   
+
         function ne(e, t, i, r) {
             return t.colorNeedleEnd ? We.linearGradient(e, r ? t.colorNeedleEnd : t.colorNeedle, r ? t.colorNeedle : t.colorNeedleEnd, i, !e.barDimensions.isVertical) : t.colorNeedle
         }
-   
+
         function ae(e, t, i, r, o, n, a, l) {
             e.lineWidth = t.needleWidth, e.strokeStyle = ne(e, t, a, l), e.beginPath(), e.moveTo(i, r), e.lineTo(o, n), e.stroke(), e.closePath()
         }
-   
+
         function le(e, t, i, r, o, n, a, l) {
             var s = ye(.4 * a),
                 d = a - s,
@@ -731,7 +730,7 @@
                 h = t.needleWidth / 2;
             e.fillStyle = ne(e, t, a, l), e.beginPath(), c ? (r > n && (d *= -1), e.moveTo(i - h, r), e.lineTo(i + h, r), e.lineTo(i + h, r + d), e.lineTo(i, n), e.lineTo(i - h, r + d), e.lineTo(i - h, r)) : (i > o && (d *= -1), e.moveTo(i, r - h), e.lineTo(i, r + h), e.lineTo(i + d, r + h), e.lineTo(o, r), e.lineTo(i + d, r - h), e.lineTo(i, r - h)), e.fill(), e.closePath()
         }
-   
+
         function se(e, t, i, r, o, n, a) {
             var l = (parseFloat(t.fontValueSize) || 0) * n / 200,
                 s = (.11 * a - l) / 2;
@@ -1233,8 +1232,9 @@
                             r.on(e, t)
                         })
                     }), r.version = ke, r.type = e[a] || n, r.initialized = !1, t.minValue = parseFloat(t.minValue), t.maxValue = parseFloat(t.maxValue), t.value = parseFloat(t.value) || 0, t.borders || (t.borderInnerWidth = t.borderMiddleWidth = t.borderOuterWidth = 0), !t.renderTo) throw TypeError("Canvas element was not specified when creating the Gauge object!");
-                var l = t.renderTo.tagName ? t.renderTo : document.getElementById(t.renderTo);
- //               if (!(l instanceof HTMLCanvasElement)) throw TypeError("Given gauge canvas element is invalid!");
+                //console.log(">> "+ t.renderTo.tagName);
+                var l = t.renderTo.tagName ? t.renderTo : document.getElementById('protiviti').shadowRoot.getElementById(t.renderTo); // mh
+                if (!(l instanceof HTMLElement)) throw TypeError("> Given gauge canvas element is invalid!");
                 return t.width = parseFloat(t.width) || 0, t.height = parseFloat(t.height) || 0, t.width && t.height || (t.width || (t.width = l.parentNode ? l.parentNode.offsetWidth : l.offsetWidth), t.height || (t.height = l.parentNode ? l.parentNode.offsetHeight : l.offsetHeight)), r.options = t || {}, r.options.animateOnInit && (r._value = r.options.value, r.options.value = r.options.minValue), r.canvas = new pe(l, t.width, t.height), r.canvas.onRedraw = r.draw.bind(r), r.animation = new ge(t.animationRule, t.animationDuration), r
             }
             return r(n, t), ue(n, [{
@@ -1459,7 +1459,8 @@
             DomObserver: be,
             vendorize: n
         })
-    }("undefined" != typeof module ? module.exports : window);    
+    }
+    ("undefined" != typeof module ? module.exports : window);
 //
 
 	let template = document.createElement("template");
@@ -1471,21 +1472,59 @@
 
 	class protivitiGauge extends HTMLElement {
 		constructor() {
-			super(); 
-			let shadowRoot = this.attachShadow({mode: "open"});
+            super(); 
+            
+            let shadowRoot = this.attachShadow({mode: "open"});
+           
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			this.addEventListener("click", event => {
 				var event = new Event("onClick");
 				this.dispatchEvent(event);
 			});
-			this._props = {};
+            this._props = {};
+            //shadowRoot.parentElement.setAttribute('ID','bar');
 		}
 
 		connectedCallback(){
+            document.getElementsByTagName("com-pro-gauge")[0].setAttribute("id", "protiviti"); //mh
 			var ctx = this.shadowRoot.getElementById('gauge');
-                        console.log("changedProperties");
+                        console.log(">> changedProperties");
                         
-
+						var myChart = new RadialGauge({
+                            renderTo: 'gauge',
+                            width: 400,
+                            height: 400,
+                            units: 'Protiviti',
+                            title: false,
+                            value: 34,
+                            valueBoxStroke: 1,
+                            minValue: 0,
+                            maxValue: 220,
+                            majorTicks: [
+                                '0','20','40','60','80','100','120','140','160','180','200','220'
+                            ],
+                            minorTicks: 2,
+                            strokeTicks: true,
+                            highlights: [
+                                { from: 0, to: 50, color: 'rgba(0,255,0,.15)' },
+                                { from: 50, to: 100, color: 'rgba(255,255,0,.15)' },
+                                { from: 100, to: 150, color: 'rgba(255,30,0,.25)' },
+                                { from: 150, to: 200, color: 'rgba(255,0,225,.25)' },
+                                { from: 200, to: 220, color: 'rgba(0,0,255,.25)' }
+                            ],
+                            colorPlate: '#eee',
+                            colorMajorTicks: '#f5f5f5',
+                            colorMinorTicks: '#ddd',
+                            colorTitle: '#222',
+                            colorUnits: '#222',
+                            colorNumbers: '#222',
+                            colorNeedle: 'rgba(240, 128, 128, 1)',
+                            colorNeedleEnd: 'rgba(255, 160, 122, .9)',
+                            valueBox: true,
+                            animationRule: 'bounce',
+                            animationDuration: 500
+                        }).draw();
+        
 		}
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
@@ -1501,43 +1540,9 @@
 				this.style["opacity"] = changedProperties["opacity"];
 			}
 
-			var ctx = this.shadowRoot.getElementById('gauge');
-						console.log("changedProperties");
-						var myChart = new RadialGauge({
-                            renderTo: 'gauge',
-                            width: 400,
-                            height: 400,
-                            units: 'Km/h',
-                            title: false,
-                            value: 0,
-                            minValue: 0,
-                            maxValue: 220,
-                            majorTicks: [
-                                '0','20','40','60','80','100','120','140','160','180','200','220'
-                            ],
-                            minorTicks: 2,
-                            strokeTicks: false,
-                            highlights: [
-                                { from: 0, to: 50, color: 'rgba(0,255,0,.15)' },
-                                { from: 50, to: 100, color: 'rgba(255,255,0,.15)' },
-                                { from: 100, to: 150, color: 'rgba(255,30,0,.25)' },
-                                { from: 150, to: 200, color: 'rgba(255,0,225,.25)' },
-                                { from: 200, to: 220, color: 'rgba(0,0,255,.25)' }
-                            ],
-                            colorPlate: '#222',
-                            colorMajorTicks: '#f5f5f5',
-                            colorMinorTicks: '#ddd',
-                            colorTitle: '#fff',
-                            colorUnits: '#ccc',
-                            colorNumbers: '#eee',
-                            colorNeedle: 'rgba(240, 128, 128, 1)',
-                            colorNeedleEnd: 'rgba(255, 160, 122, .9)',
-                            valueBox: true,
-                            animationRule: 'bounce',
-                            animationDuration: 500
-                        }).draw();
-		}
 	}
+   
 
-	customElements.define("com-pro-gauge", protivitiGauge);
+    customElements.define('com-pro-gauge', protivitiGauge);
+    
 })();
