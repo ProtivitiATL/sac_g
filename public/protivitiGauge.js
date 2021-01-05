@@ -1543,7 +1543,7 @@ onCustomWidgetAfterUpdate(changedProperties) {
     console.log(">>> this._props prop = ", this._props.value);
  
     ctx.value = this._props.value;
-    //myChart.draw;
+    ctx.draw();
 }
 
 }
