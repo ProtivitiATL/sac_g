@@ -1533,10 +1533,14 @@ onCustomWidgetBeforeUpdate(changedProperties) {
 }
 
 onCustomWidgetAfterUpdate(changedProperties) {
-    //document.getElementsByTagName("com-pro-gauge")[0].setAttribute("id", "protiviti");
+     console.log(">> changedProperties");
+    console.log("onCustomWidgetAfterUpdate")
+    console.log("this._props prop = ", this._props);
+    this._props = { ...this._props, ...changedProperties };
+
     var ctx = this.shadowRoot.getElementById('gauge');
-                console.log(">> changedProperties");
-                
+
+
                 var myChart = new RadialGauge({
                     renderTo: 'gauge',
                     width: 400,
