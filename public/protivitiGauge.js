@@ -1522,43 +1522,6 @@ connectedCallback() {
                     valueBox: true,
                     animationRule: 'bounce',
                     animationDuration: 500
-                }).draw();    document.getElementsByTagName("com-pro-gauge")[0].setAttribute("id", "protiviti");
-    var ctx = this.shadowRoot.getElementById('gauge');
-                console.log(">> changedProperties");
-                
-                var myChart = new RadialGauge({
-                    renderTo: 'gauge',
-                    width: 400,
-                    height: 400,
-                    units: 'Protiviti',
-                    title: false,
-                    value: 34,
-                    valueBoxStroke: 1,
-                    minValue: 0,
-                    maxValue: 220,
-                    majorTicks: [
-                        '0','20','40','60','80','100','120','140','160','180','200','220'
-                    ],
-                    minorTicks: 2,
-                    strokeTicks: true,
-                    highlights: [
-                        { from: 0, to: 50, color: 'rgba(0,255,0,.15)' },
-                        { from: 50, to: 100, color: 'rgba(255,255,0,.15)' },
-                        { from: 100, to: 150, color: 'rgba(255,30,0,.25)' },
-                        { from: 150, to: 200, color: 'rgba(255,0,225,.25)' },
-                        { from: 200, to: 220, color: 'rgba(0,0,255,.25)' }
-                    ],
-                    colorPlate: '#eee',
-                    colorMajorTicks: '#f5f5f5',
-                    colorMinorTicks: '#ddd',
-                    colorTitle: '#222',
-                    colorUnits: '#222',
-                    colorNumbers: '#222',
-                    colorNeedle: 'rgba(240, 128, 128, 1)',
-                    colorNeedleEnd: 'rgba(255, 160, 122, .9)',
-                    valueBox: true,
-                    animationRule: 'bounce',
-                    animationDuration: 500
                 }).draw();
 
 
