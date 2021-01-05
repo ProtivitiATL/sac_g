@@ -1542,8 +1542,8 @@ onCustomWidgetAfterUpdate(changedProperties) {
 
     console.log(">>> this._props prop = ", this._props.value);
  
-    ctx.value = this._props.value;
-    ctx.draw();
+    this.value = this._props.value;
+    this.draw();
 }
 
 }
