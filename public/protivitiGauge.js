@@ -1533,7 +1533,7 @@ onCustomWidgetBeforeUpdate(changedProperties) {
 }
 
 onCustomWidgetAfterUpdate(changedProperties) {
-    document.getElementsByTagName("com-pro-gauge")[0].setAttribute("id", "protiviti");
+    //document.getElementsByTagName("com-pro-gauge")[0].setAttribute("id", "protiviti");
     var ctx = this.shadowRoot.getElementById('gauge');
                 console.log(">> changedProperties");
                 
