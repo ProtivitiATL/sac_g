@@ -1549,7 +1549,7 @@ onCustomWidgetAfterUpdate(changedProperties) {
 //            var min = gauge.options.minValue - 20;
 //             var max = gauge.options.maxValue + 20;
 
-            gauge.value = this._props.value; //min + Math.random() * (max - min);
+            gauge.value = 55; //this._props.value; //min + Math.random() * (max - min);
 //        }, 
 //        gauge.animation.duration + 50));
     });
