@@ -1540,7 +1540,9 @@ onCustomWidgetAfterUpdate(changedProperties) {
 
     var ctx = this.shadowRoot.getElementById('gauge');
 
-    ctx.value = this._props.value;
+    console.log(">>> this._props prop = ", this._props.value);
+ 
+    ctx.value = 55; //this._props.value;
     ctx.draw;
 }
 
